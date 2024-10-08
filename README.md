@@ -1,3 +1,5 @@
+<a id="readme-top"></a>
+
 <div align="center">
     <h1>Docker шаблон для PHP с RoadRunner</h1>
 
@@ -26,7 +28,7 @@
 2. **phpstan** - проверка качества кода
 3. **phpunit** - тестирование
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">Полетели на верх!</a>)</p>
 
 ## Начало работы
 
@@ -83,7 +85,7 @@
 DATABASE_URL="postgresql://$APP_DATABASE_USER:$APP_DATABASE_SECRET@database:5432/$APP_DATABASE_NAME?serverVersion=16&charset=utf8"
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">Полетели на верх!</a>)</p>
 
 ## Использование
 
@@ -93,7 +95,7 @@ DATABASE_URL="postgresql://$APP_DATABASE_USER:$APP_DATABASE_SECRET@database:5432
 make help
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">Полетели на верх!</a>)</p>
 
 ## Структура шаблона
 
@@ -127,7 +129,7 @@ make help
 
 Здесь описана сборка PHP образов под конкретные решения (dev или prod).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">Полетели на верх!</a>)</p>
 
 ## Модификация
 
@@ -152,12 +154,13 @@ make help
 Для детальной настройки сервиса (если нужно описать Dockerfile) можно в каталоге docker добавить соответствующий
 новому сервису подкаталог и в нём уже описать Dockerfile и расположить файлы конфигурации.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">Полетели на верх!</a>)</p>
 
 ## Roadmap
 
 - [x] Добавить сервис PHP
 - [x] Добавить сервис PostgreSQL
+- [ ] Добавить описание настройки и работы с Xdebug
 - [ ] Тестирование
   - [ ] Добавить запуск авто-тестов в GitHub
   - [ ] Добавить запуск авто-тестов в GitLab
@@ -167,7 +170,7 @@ make help
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">Полетели на верх!</a>)</p>
 
 [Docker.com]: https://img.shields.io/badge/docker-086dd7?style=for-the-badge&logo=docker&logoColor=white
 
