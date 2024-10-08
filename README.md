@@ -26,6 +26,8 @@
 2. **phpstan** - проверка качества кода
 3. **phpunit** - тестирование
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Начало работы
 
 ### Для работы необходимы
@@ -81,6 +83,8 @@
 DATABASE_URL="postgresql://$APP_DATABASE_USER:$APP_DATABASE_SECRET@database:5432/$APP_DATABASE_NAME?serverVersion=16&charset=utf8"
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Использование
 
 Для упрощённого управления контейнерами добавлен Makefile.
@@ -89,7 +93,7 @@ DATABASE_URL="postgresql://$APP_DATABASE_USER:$APP_DATABASE_SECRET@database:5432
 make help
 ```
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Структура шаблона
 
@@ -123,28 +127,32 @@ make help
 
 Здесь описана сборка PHP образов под конкретные решения (dev или prod).
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Модификация
 
-### Добавление утилит или PHP расширений в PHP приложение
+#### Добавление утилит или PHP расширений в PHP приложение
 
 Описываем установку и настройку необходимого в docker/app/base.php.Dockerfile.
 Желательно это сделать в инструкции `RUN apk add --no-cache --virtual .build-deps ...` до комментария `Cleanup`
 
-### Дополнительная настройка PHP только для разработки
+#### Дополнительная настройка PHP только для разработки
 
 При необходимости добавить новый/вспомогательный функционал, который будет использоваться только в разработке,
 то модернизируем файл docker/app/Dockerfile в блоке **DEVELOP PHP**
 
-### Дополнительная настройка PHP только для продакшена
+#### Дополнительная настройка PHP только для продакшена
 
 При необходимости добавить новый/вспомогательный функционал, который будет использоваться только в продакшене,
 то модернизируем файл docker/app/Dockerfile в блоке **PRODUCTION PHP**
 
-### Добавление новых сервисов
+#### Добавление новых сервисов
 
 Чтобы добавить новый сервис, нужно описать его в нужном compose.*.yaml файле (или в обоих).
 Для детальной настройки сервиса (если нужно описать Dockerfile) можно в каталоге docker добавить соответствующий
 новому сервису подкаталог и в нём уже описать Dockerfile и расположить файлы конфигурации.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Roadmap
 
@@ -154,6 +162,12 @@ make help
   - [ ] Добавить запуск авто-тестов в GitHub
   - [ ] Добавить запуск авто-тестов в GitLab
   - [ ] Разобраться с проверкой покрытия тестами
+
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 [Docker.com]: https://img.shields.io/badge/docker-086dd7?style=for-the-badge&logo=docker&logoColor=white
 
