@@ -1,0 +1,39 @@
+services:
+
+  app:
+    container_name: ${INFRA_APP_CONTAINER_NAME}
+    build:
+      context: .
+      dockerfile: ./docker/app/Dockerfile
+      target: app-prod
+      args:
+        APP_BASE_DIR: ${INFRA_APP_BASE_DIR}
+        BASE_PHP_IMAGE_TAG: ${BASE_PHP_IMAGE_TAG}
+        COMPOSER_AUTH: "{}"
+    ports:
+      - ${INFRA_APP_PORT-8080}:${APP_APP_PORT-8080}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    env_file:
+      - .env
+    restart: unless-stopped
+
+  database:
+    container_name: ${INFRA_DATABASE_CONTAINER_NAME}
+    image: postgres:${INFRA_DATABASE_POSTGRES_VERSION}
+    environment:
+      POSTGRES_DB: ${APP_DATABASE_NAME}
+      POSTGRES_USER: ${APP_DATABASE_USER}
+      POSTGRES_PASSWORD: ${APP_DATABASE_SECRET}
+      PGDATA: /data/postgres
+      TZ: 'Europe/Moscow'
+      PGTZ: 'Europe/Moscow'
+    volumes:
+      - database:/var/lib/postgresql/data
+      - ./var/pgbackup:/backup
+    ports:
+      - ${INFRA_DATABASE_PORT-5432}:${APP_DATABASE_PORT-5432}
+    restart: unless-stopped
+
+volumes:
+  database:
