@@ -3,6 +3,8 @@
 <div align="center">
     <h1>Docker шаблон для PHP с RoadRunner</h1>
 
+<p>С использованием и наличием:</p>
+
 [![Docker][Docker.com]][Docker-url]
 [![PHP][PHP.net]][PHP-url]
 [![Symfony][Symfony.com]][Symfony-url]
