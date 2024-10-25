@@ -170,7 +170,7 @@ make help
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See <a href="./LECENSE.md">LICENSE.md</a> for more information.
 
 <p align="right">(<a href="#readme-top">Полетели на верх!</a>)</p>
 
